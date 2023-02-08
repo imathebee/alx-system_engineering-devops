@@ -10,3 +10,4 @@ script 8 deletes the file betty in directory my_first_directory
 script 9 deletes the directory in tmp/
 script 10 changes working directory to previous one
 script 11 writes a script that lists all files( hidden that start with .) in current directory and parent of working directory and /boot dir in long f
+script 12 write script that prints the type of file named iamafile that will be in /tmp when running script
