@@ -13,3 +13,4 @@ script 11 writes a script that lists all files( hidden that start with .) in cur
 script 12 write script that prints the type of file named iamafile that will be in /tmp when running script
 script 13 a symbolic link to /bin/ls, named ls __ls__  The symbolic link is to be created in local directory
 script 14 writes a script that copies html files from working dir to parent directory (only newer files or files that didn't exist in parent directory)
+script 15 will move all files beginning with uppercase letter to the directory /tmp/u
