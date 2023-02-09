@@ -1,16 +1,12 @@
-script 0 prints the absolute path name of  current working directory
-script 1 displays content list of current directory
-script 2 changes working directory to the user's home directory
-script 3 displays current directory in a long format
-script 4 displays current directory contents, including hidden files that start with ., using long format
-script 5 displays current directory contents, in long format , with user and group ID's displayed numerically and hidden files starting with .
-script 6 creates a directory named my_first_directory in the tmp directory
-script 7 moves the file betty from /tmp/ to /tmp/my_first_directory
-script 8 deletes the file betty in directory my_first_directory
-script 9 deletes the directory in tmp/
-script 10 changes working directory to previous one
-script 11 writes a script that lists all files( hidden that start with .) in current directory and parent of working directory and /boot dir in long f
-script 12 write script that prints the type of file named iamafile that will be in /tmp when running script
-script 13 a symbolic link to /bin/ls, named ls __ls__  The symbolic link is to be created in local directory
-script 14 writes a script that copies html files from working dir to parent directory (only newer files or files that didn't exist in parent directory)
-script 15 will move all files beginning with uppercase letter to the directory /tmp/u
+s0 prints absolute path name of current working directory
+s1 displays content list of current directory
+s2 changes working directory to user's home directory 
+s3 displays current directory in long format
+s4 displays current directory contents, including hidden files that start with a dot using long format
+s5 displays current directory contents, in long format, with users and group IDsdisplayed numerically and hidden files starting with a dot
+s6 creates a directory in tmp directory
+s7 moves a file betty from /tmp/ to /tmp/my_first_directory
+s8 deletes the file betty in directory my_first_directory
+s9 deletes directory in /tmp
+s10 changs working directory to previous one
+s11 writes a script that list all hidden files starting with dot in current directory and parent of working  directory and /boot
