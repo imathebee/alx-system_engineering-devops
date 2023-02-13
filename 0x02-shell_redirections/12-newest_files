@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lt | head
+find -name "*.sh" -type f | head -n 10
