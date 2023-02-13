@@ -1,2 +1,2 @@
 #!/bin/bash
-find -name "*.sh" -type f | head -n 10
+find -name "[0-9]*" -type f | sort -n | tail -n 10
