@@ -1,2 +1,2 @@
 #!/bin/bash
-find -name "[0-9]*" -type f | sort -n | tail -n 10
+find . -name "[0-9]*" -type f -printf '%@ %p\n' | sort -nr | head -n 10
