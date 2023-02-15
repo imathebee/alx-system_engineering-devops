@@ -1,0 +1,3 @@
+#!/bin/bash
+echo $((16#${DECIMAL:0}))
+#we could also do this : printf "%x\n" ${DECIMAL:0}
