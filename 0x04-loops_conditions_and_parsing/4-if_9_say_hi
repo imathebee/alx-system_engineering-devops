@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times, but for the 9th iteration, displays "Best School" and then "Hi" on a new line.
+
+# Initialize a counter variable
+i=1
+
+# Use while loop to print "Best School" 10 times
+while ((i <= 10))
+do
+    # Check if it's the 9th iteration
+    if ((i == 9))
+    then
+        echo "Best School"
+        echo "Hi"
+    else
+        echo "Best School"
+    fi
+
+    # Increment the counter
+    ((i++))
+done
