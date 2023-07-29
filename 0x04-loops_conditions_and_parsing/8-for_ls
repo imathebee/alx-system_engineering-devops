@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Use for loop to iterate over the files in the current directory
+for file in *; do
+    # Check if the file is not a directory and is not hidden
+    if [[ -f $file && ! $file =~ ^\..* ]]; then
+        # Use cut command to extract the part of the name after the first dash
+        name_after_dash=$(echo "$file" | cut -d'-' -f2-)
+        echo "$name_after_dash"
+    fi
+done
