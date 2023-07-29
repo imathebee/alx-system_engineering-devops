@@ -2,6 +2,18 @@
 #The script displays the content of the file /etc/passwd, using the while loop + IFS.
 while IFS=: read -r username password userid groupid user_info homedir shell
 do
-    echo "The user $username is part of the $groupid gang, lives in $homedir and rides $shell."
-    echo "User ID's place is protected by the passcode $password, more info about the user here: $user_info"
+    case "$shell" in
+        */bin/bash)
+            shell="rides /bin/bash."
+            ;;
+        */usr/sbin/nologin)
+            shell="rides /usr/sbin/nologin."
+            ;;
+        *)
+            shell=""
+            ;;
+    esac
+
+    echo "The user $username is part of the $groupid gang, lives in $homedir and $shell"
+    echo "$userid's place is protected by the passcode $password, more info about the user here: $user_info"
 done < /etc/passwd
