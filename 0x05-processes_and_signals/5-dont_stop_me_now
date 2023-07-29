@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Start the 4-to_infinity_and_beyond process in the background
+./4-to_infinity_and_beyond &
+
+# Get the PID (Process ID) of the 4-to_infinity_and_beyond process
+PID=$!
+
+# Wait for user input to stop the process
+read -rsp "Press any key to stop the process..." -n1 key
+
+# Use kill command to terminate the process
+kill "$PID"
