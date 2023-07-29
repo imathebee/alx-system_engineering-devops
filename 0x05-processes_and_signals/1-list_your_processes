@@ -1,10 +1,25 @@
 #!/usr/bin/env bash
 #script that displays a list of currently running processes.
-# Use ps command with appropriate options
-# -e: Show all processes
-# -o: Custom format output
-# user: User name
-# pid: Process ID
-# ppid: Parent process ID
-# cmd: Command being run
-ps -e -o user,pid,ppid,cmd --forest
+echo "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND"
+
+# Use the ps command to get the process information
+ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command | while read -r line; do
+    # Skip the first line header
+    if [[ "$line" != "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND" ]]; then
+        # Extract the relevant information using awk
+        user=$(awk '{print $1}' <<< "$line")
+        pid=$(awk '{print $2}' <<< "$line")
+        cpu=$(awk '{print $3}' <<< "$line")
+        mem=$(awk '{print $4}' <<< "$line")
+        vsz=$(awk '{print $5}' <<< "$line")
+        rss=$(awk '{print $6}' <<< "$line")
+        tty=$(awk '{print $7}' <<< "$line")
+        stat=$(awk '{print $8}' <<< "$line")
+        start=$(awk '{print $9" "$10" "$11}' <<< "$line")
+        time=$(awk '{print $12}' <<< "$line")
+        command=$(awk '{print $NF}' <<< "$line")
+
+        # Print the desired format
+        echo "$user $pid $cpu $mem $vsz $rss $tty $stat $start $time $command"
+    fi
+done

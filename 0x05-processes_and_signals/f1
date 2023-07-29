@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#script that displays a list of currently running processes.
+# Use ps command with appropriate options
+# -e: Show all processes
+# -o: Custom format output
+# user: User name
+# pid: Process ID
+# ppid: Parent process ID
+# cmd: Command being run
+ps -e -o user,pid,ppid,cmd --forest
