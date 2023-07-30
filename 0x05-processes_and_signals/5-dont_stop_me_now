@@ -6,10 +6,8 @@
 PID=$!
 
 # Wait for user input to stop the process
-read -rsp "Press any key to stop the process..." -n1 key
+read -rsp "Press any key to stop the process..."
 
 # Use kill command to terminate the process
 kill "$PID"
 
-# Example: Display the captured key later in the script
-echo "You pressed the key: $key"
