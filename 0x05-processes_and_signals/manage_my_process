@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Function to write "I am alive!" to the file
+alive() {
+    echo "I am alive!" >> /tmp/my_process
+}
+
+# Run the function indefinitely with a 2-second pause
+while true
+do
+    alive
+    sleep 2
+done
