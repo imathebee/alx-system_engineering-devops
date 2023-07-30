@@ -10,3 +10,6 @@ read -rsp "Press any key to stop the process..." -n1 key
 
 # Use kill command to terminate the process
 kill "$PID"
+
+# Example: Display the captured key later in the script
+echo "You pressed the key: $key"
